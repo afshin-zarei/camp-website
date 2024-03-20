@@ -94,6 +94,7 @@ a {
     height: 0.3rem;
     border-radius: 1.8rem;
     background-color: var(--orange);
+    transition: all 200ms ease-in-out;
 }
 .nav__btn-line::before, .nav__btn-line::after {
     content: "";
@@ -103,10 +104,22 @@ a {
     height: 0.3rem;
     border-radius: 1.8rem;
     background-color: var(--orange);
+    transition: all 200ms ease-in-out;
 }
 .nav__btn-line::before {
     top: 0.8rem;
 }
 .nav__btn-line::after {
     top: -0.8rem;
+}
+.nav__btn--open .nav__btn-line {
+    background-color: transparent;
+}
+.nav__btn--open .nav__btn-line::before {
+    transform: translateY(-8px) rotate(45deg);
+    height: 0.2rem;
+}
+.nav__btn--open .nav__btn-line::after {
+    transform: translateY(8px) rotate(-45deg);
+    height: 0.2rem;
 }
